@@ -3,10 +3,9 @@ const {I} = inject();
 module.exports = {
 
 	fields: {
-		username_textbox:"dsadas",
-		password_textbox:"dsad",
-		get_started_button:"das"
-	},
+    		email: '#user_basic_email',
+    		password: '#user_basic_password'
+    },
 
 	userLogin(arr_user_details) {
 		this.fillUsernameTextbox(arr_user_details["username"]);

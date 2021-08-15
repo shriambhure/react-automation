@@ -1,34 +1,33 @@
-//const {setHeadlessWhen, setWindowSize} = require("@codeceptjs/configure");
-const chromePaths = require('chrome-paths');
-require('dotenv').config({path:'.env'});
-//setHeadlessWhen(process.env.HEADLESS);
-//setWindowSize(1920,1080);
+const { setHeadlessWhen } = require('@codeceptjs/configure');
+
+// turn on headless mode when running with HEADLESS=true environment variable
+// export HEADLESS=true && npx codeceptjs run
+setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-	tests: "Applications/**/*.js",
-	output: process.env.REPORT_DIR,
-	helper: {
-		Puppeteer: {
-			restart: true,
-			waitForAction: 2000,
-			pageload_timeout: 30000,
-			connection_timeout: 30000,
-			request_timeout: 30000,
-			chrome: {
-				executablePath: chromePaths.chrome
-			}
-		}
-	},
-	include: require('./Interfaces/CServicePagePath.js'),
-	bootstrap: require('./Libraries/bootstrap.js'),
-	name: "AngularTest",
-	plugins: {
-		allure: {
-			enabled: true
-		},
-		screenshotOnFail: {
-			enabled: true
-		}
-	}
-
+  tests: 'Applications/**/*.js',
+  output: '../CodeceptjsLog',
+  helpers: {
+    Puppeteer: {
+      url: 'https://codecept.io/puppeteer/',
+      show: true,
+      windowSize: '1200x900'
+    }
+  },
+  include: require('./Interfaces/CServicePagePath.js'),
+  bootstrap: null,
+  mocha: {},
+  name: 'react-automation',
+  plugins: {
+    pauseOnFail: {},
+    retryFailedStep: {
+      enabled: true
+    },
+    tryTo: {
+      enabled: true
+    },
+    screenshotOnFail: {
+      enabled: true
+    }
+  }
 }

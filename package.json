@@ -1,32 +1,10 @@
 {
-  "name": "AngularTest",
+  "name": "react-automation",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "Shriram Ambhure",
-  "license": "ISC",
-  "devDependencies": {
-    "@codeceptjs/helper": "^1.0.2",
-    "codeceptjs": "^2.6.4",
-    "puppeteer": "^3.0.4"
-  },
+  "description": "react test automation",
+  "main": "index.js",  
   "dependencies": {
-    "chai": "^4.3.4",
-    "chrome-paths": "^1.0.1",
-    "copy-files-from-to": "^3.2.0",
-    "date-format": "3.0.0",
-    "dotenv": "10.0.0",
-    "extract": "^1.0.0",
-    "faker": "^4.1.0"
-  },
-  "scripts": {
-    "postinstall": "copy-files-from-to"
-  },
-  "copyFiles": [
-    {
-      "from": "./.env-sample",
-      "to": "./.env"
-    }
-  ]
+    "codeceptjs": "^3.1.1",
+    "puppeteer": "^10.2.0"
+  }
 }
