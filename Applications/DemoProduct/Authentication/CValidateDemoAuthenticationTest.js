@@ -1,8 +1,7 @@
 const { jsonReader, demoAuthentication} = inject();
-let login = import('authtication.js');
 
 Feature('Validate demo product authentication test');
 
-Scenario('Demo product authentication',{retries:1}, () => {
-	demoAuthentication.userLogin(arr_test_data["user_authentication"]);
-}).injectDependencies( { testData : jsonReader.getTestFileData(__filename) } ).tag("@smoke");
+Scenario('Demo product authentication', (test_data) => {
+	demoAuthentication.userLogin(test_data["user_authentication"]);
+}).injectDependencies({ test_data : jsonReader.getTestFileData(__filename) }).tag("@smoke");

@@ -17,9 +17,6 @@ exports.config = {
 			chrome: {
 				executablePath: chromePaths.chrome
 			}
-		},
-		StepFile: {
-			require: './Libraries/steps_file.js',
 		}
 	},
 	include: require('./Interfaces/CServicePagePath.js'),

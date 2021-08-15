@@ -3,9 +3,9 @@ const {I} = inject();
 module.exports = {
 
 	fields: {
-		username_textbox:"",
-		password_textbox:"",
-		get_started_button:""
+		username_textbox:"dsadas",
+		password_textbox:"dsad",
+		get_started_button:"das"
 	},
 
 	userLogin(arr_user_details) {
@@ -15,14 +15,14 @@ module.exports = {
 	},
 
 	fillUsernameTextbox(username) {
-		I.fillField(username_textbox,username);
+		I.fillField(this.fields.username_textbox,username);
 	},
 
 	fillPasswordTextbox(password) {
-		I.fillField(password_textbox,password);
+		I.fillField(this.fields.password_textbox,password);
 	},
 
 	clickOnGetStartedButton() {
-		I.click(get_started_button);
-	},
+		I.click(this.fields.get_started_button);
+	}
 }

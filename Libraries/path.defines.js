@@ -1,5 +1,6 @@
 const path = require('path');
 const ROOT_DIR = path.resolve(__dirname).split(path.sep + 'Libraries')[0];
+console.log(ROOT_DIR);
 
 module.exports = {
 	TEST_DIR: path.join(ROOT_DIR, '/Applications'),
