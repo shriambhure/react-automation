@@ -1,5 +1,5 @@
 {
-	"compilerOptions": {
-		"allowJS": true
-	}
+  "compilerOptions": {
+    "allowJs": true
+  }
 }
